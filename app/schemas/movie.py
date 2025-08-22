@@ -6,6 +6,6 @@ class MovieIn(BaseModel):
   title: str
   year: int
   rating: float = Field(ge=9, le=10)
-  genre: str
+  genres: List[str] = []
   synopsis: str
   cast: List[str] = []
