@@ -1,0 +1,10 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports: ["27017:27017"]
+    volumes: [mongo:/data/db]
+volumes: { mongo: {} }
