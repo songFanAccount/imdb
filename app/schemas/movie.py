@@ -9,3 +9,9 @@ class MovieIn(BaseModel):
   synopsis: Optional[str] = None
   genres: List[str] = []
   cast: List[str] = []
+
+class MovieSummaryDetails(BaseModel):
+  title: str
+  year: Optional[int] = None
+  synopsis: Optional[str] = None
+  genres: List[str] = []
